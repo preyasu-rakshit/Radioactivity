@@ -83,9 +83,13 @@ class betaParticle:
         self.y_vel = self.vel_mag*random.choice((-1, 1))
 
     def draw(self, surface):
-        self.x_pos += self.x_vel
-        self.y_pos += self.y_vel
         self.surface = surface
-        self.surface.blit(self.img, (self.x_pos, self.y_pos))
+        if self.on_screen():
+            self.x_pos += self.x_vel
+            self.y_pos += self.y_vel
+            self.surface.blit(self.img, (self.x_pos, self.y_pos))
 
-
+    def on_screen(self):
+        if self.x_pos > 0 and self.x_pos < self.surface.get_size()[0]:
+            if self.y_pos > 0 and self.y_pos < self.surface.get_size()[1]:
+                return True

@@ -1,10 +1,10 @@
-import pygame, sys
+import pygame
 from atoms import Carbon
 import random
 from matplotlib import pyplot as plt
 
 initial_conc = int(input("Enter initial number of atoms: "))
-screen_size = (800, 600)
+screen_size = (1280, 720)
 screen = pygame.display.set_mode(screen_size)
 pygame.display.set_caption("Radioactivity")
 clock = pygame.time.Clock()
