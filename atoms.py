@@ -24,7 +24,7 @@ class Carbon:
         self.x_pos , self.y_pos = pos
         self.vel_mag = 0.3
         self.status = "undecayed"
-        self.half_life = 5730
+        self.half_life = 1000
         self.decay_constant = math.log(2)/self.half_life
 
     def draw(self, surface):

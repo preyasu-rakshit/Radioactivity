@@ -1,0 +1,1 @@
+To run this simulation, first install the required libraries using `pip install -r requirements.txt` on your command prompt.
